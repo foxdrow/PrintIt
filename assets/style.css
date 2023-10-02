@@ -216,6 +216,11 @@ header {
   position: absolute;
   right: 0;
 }
+#banner .arrow_right:hover,
+#banner .arrow_left:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
 /* Gestion des points du carrousel */
 .dots {
   position: absolute;
@@ -230,6 +235,10 @@ header {
   border: 3px solid #fff;
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dot:hover {
+  cursor: pointer;
+  scale: 1.2;
 }
 .dot_selected {
   background-color: #fff;
