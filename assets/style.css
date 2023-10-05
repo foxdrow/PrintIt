@@ -219,7 +219,7 @@ header {
 #banner .arrow_right:hover,
 #banner .arrow_left:hover {
   cursor: pointer;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 /* Gestion des points du carrousel */
 .dots {
@@ -238,7 +238,7 @@ header {
 }
 .dot:hover {
   cursor: pointer;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 .dot_selected {
   background-color: #fff;
