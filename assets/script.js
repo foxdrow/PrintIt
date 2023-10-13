@@ -33,21 +33,27 @@ for (let i = 0; i < dot.length; i++) {
 }
 
 arrow_left.addEventListener("click", function () {
-  if (currentSlide == 0) changeImage(slides.length - 1);
-  else changeImage(currentSlide - 1);
+  if (currentSlide == 0) {
+    changeImage(slides.length - 1);
+  } else {
+    changeImage(currentSlide - 1);
+  }
 });
 
 arrow_right.addEventListener("click", function () {
-  if (currentSlide == slides.length - 1) changeImage(0);
-  else changeImage(currentSlide + 1);
+  if (currentSlide == slides.length - 1) {
+    changeImage(0);
+  } else {
+    changeImage(currentSlide + 1);
+  }
 });
 
-changeImage = (nb) => {
-  banner_img.src = "./assets/images/slideshow/" + slides[nb].image;
-  banner_tagLine.innerHTML = slides[nb].tagLine;
-  dot.forEach((d) => {
-    d.classList.remove("dot_selected");
+changeImage = (slideNumber) => {
+  banner_img.src = "./assets/images/slideshow/" + slides[slideNumber].image;
+  banner_tagLine.innerHTML = slides[slideNumber].tagLine;
+  dot.forEach((item) => {
+    item.classList.remove("dot_selected");
   });
-  dot[nb].classList.add("dot_selected");
-  currentSlide = nb;
+  dot[slideNumber].classList.add("dot_selected");
+  currentSlide = slideNumber;
 };
